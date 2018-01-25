@@ -1,0 +1,27 @@
+1. 安装 loader 模块：
+    cnpm install style-loader -D
+    cnpm install css-loader -D
+    cnpm install file-loader -D
+2. 安装 Element-UI 模块
+   cnpm install element-ui --save 
+   
+3.修改webpack.base.conf.js的配置:
+     {
+        test: /\\\\\\\\.css$/,
+        loader: "style!css"
+    },
+    {
+        test: /\\\\\\\\.(eot|woff|woff2|ttf)([\\\\\\\\?]?.*)$/,
+        loader: "file"
+    }     
+    
+    
+    
+4、打开项目：src/main.js,添加下面三条
+      import ElementUI from 'element-ui'
+      import 'element-ui/lib/theme-default/index.css'
+      这里要注意版本新的有可能要改成这句：
+      import 'element-ui/lib/theme-chalk/index.css';
+      Vue.use(ElementUI)
+      
+ 5. 成功！！！
